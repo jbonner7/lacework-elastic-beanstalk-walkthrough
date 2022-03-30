@@ -65,18 +65,17 @@ Create an ./ebextensions directory within your root app directory that you’ll 
 node_app$ chmod 644 .ebextensions
 node_app$ cd .ebextensions
 .ebextensions$ touch lacework.config
+```
 
+Using your editor of choice, edit the lacework.config file and paste the above code snippet. Make sure you place your agent access token in the config and save the file and either launch your app using the following eb cli commands:
 
-#Using your editor of choice, edit the lacework.config file and paste the above code snippet
-#Make sure you place your agent access token in the config and save the file
-and either launch your app using the following eb cli commands:
-
-
-node_app$ eb init
+```node_app$ eb init
 node_app$ eb create
+```
+
 or update your app (if the app is already deployed) using the eb cli command:
 
-
+```
 node_app$ eb deploy
 ```
 
